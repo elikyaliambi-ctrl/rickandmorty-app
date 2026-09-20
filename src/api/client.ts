@@ -1,7 +1,3 @@
-// Enda stället i hela appen som känner till bas-URL:en och hur ett
-// misslyckat svar ska tolkas. Alla andra moduler (och komponenter)
-// pratar bara med funktioner i api/-mappen, aldrig direkt med fetch.
-
 const BASE_URL = "https://rickandmortyapi.com/api";
 
 export async function apiGet<T>(path: string): Promise<T> {

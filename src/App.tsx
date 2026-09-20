@@ -4,10 +4,6 @@ import { CharacterDetail } from "./components/CharacterDetail";
 import { FavoritesPanel } from "./components/FavoritesPanel";
 import "./App.css";
 
-// selectedId styr vilken vy som visas. Det behöver inte ligga i
-// context eftersom bara App.tsx själv använder det för att växla
-// mellan CharacterList och CharacterDetail - det skickas ett enda
-// steg ner som props, inte "hela vägen ner" genom flera lager.
 export default function App() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
 

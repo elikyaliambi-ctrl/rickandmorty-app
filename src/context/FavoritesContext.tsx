@@ -6,12 +6,6 @@ import {
   type ReactNode,
 } from "react";
 
-// Det här är appens delade state. Listvyn, detaljvyn och
-// favoritpanelen i headern läser och ändrar samma favoriteIds-array
-// via den här context:en (se hooks/useFavorites.ts), utan att skicka
-// props genom flera lager. Ändrar man en favorit i listvyn syns det
-// direkt i detaljvyn och i panelen, eftersom alla tre pratar med
-// samma Provider.
 
 export interface FavoritesContextValue {
   favoriteIds: number[];
