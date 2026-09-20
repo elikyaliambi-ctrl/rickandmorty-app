@@ -12,9 +12,7 @@ interface CharacterListProps {
 export function CharacterList({ onSelect }: CharacterListProps) {
   const [page, setPage] = useState(1);
 
-  // All hämtning går via useFetch + fetchCharacters. Komponenten vet
-  // bara om tre lägen: loading, error och data - inget fetch-anrop
-  // ligger inne i JSX:en.
+
   const { data, loading, error } = useFetch(
     () => fetchCharacters(page),
     [page],

@@ -4,11 +4,6 @@ interface FavoritesPanelProps {
   onSelect: (id: number) => void;
 }
 
-// Den här panelen renderas en gång i App.tsx och syns oavsett om man
-// tittar på listvyn eller detaljvyn. Den läser samma context som
-// CharacterCard och CharacterDetail - det är det som bevisar att
-// favoriterna faktiskt är delat state och inte bara två separata
-// kopior som råkar se lika ut.
 export function FavoritesPanel({ onSelect }: FavoritesPanelProps) {
   const { favoriteIds, toggleFavorite } = useFavorites();
 
